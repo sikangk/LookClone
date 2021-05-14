@@ -156,7 +156,10 @@ const Detail = ({navigation, route}) => {
             <BodtItemContainer>
               <TouchableOpacity
                 onPress={() =>
-                  navigation.navigate('Purchase', {name: '구매하기'})
+                  navigation.navigate('Purchase', {
+                    name: route.params.names.title,
+                    item: item,
+                  })
                 }>
                 <Image source={item.itemImage} />
               </TouchableOpacity>
